@@ -5,13 +5,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "link_list_F4GCRR": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
-          }
-        },
         "image_Jh9TQW": {
           "type": "image",
           "settings": {
@@ -19,11 +12,18 @@
             "image_width": 75,
             "alignment": ""
           }
+        },
+        "link_list_F4GCRR": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "main-menu"
+          }
         }
       },
       "block_order": [
-        "link_list_F4GCRR",
-        "image_Jh9TQW"
+        "image_Jh9TQW",
+        "link_list_F4GCRR"
       ],
       "settings": {
         "color_scheme": "scheme-2",
