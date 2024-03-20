@@ -13,7 +13,7 @@
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "3d-lift",
     "buttons_border_thickness": 1,
-    "buttons_border_opacity": 100,
+    "buttons_border_opacity": 95,
     "buttons_radius": 0,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
@@ -101,8 +101,8 @@
     "brand_description": "<p><\/p>",
     "brand_image": "shopify:\/\/shop_images\/logo.png",
     "brand_image_width": 100,
-    "social_facebook_link": "",
-    "social_instagram_link": "",
+    "social_facebook_link": "https:\/\/facebook.com\/realtrust",
+    "social_instagram_link": "https:\/\/instagram.com\/realtrust",
     "social_youtube_link": "",
     "social_tiktok_link": "",
     "social_twitter_link": "",
@@ -407,5 +407,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+
+    ]
   }
 }

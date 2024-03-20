@@ -9,13 +9,21 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/logo.png",
-            "image_width": 65,
+            "image_width": 75,
             "alignment": ""
+          }
+        },
+        "link_list_F4GCRR": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "main-menu"
           }
         }
       },
       "block_order": [
-        "image_Jh9TQW"
+        "image_Jh9TQW",
+        "link_list_F4GCRR"
       ],
       "settings": {
         "color_scheme": "scheme-2",
