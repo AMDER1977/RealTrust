@@ -2,42 +2,21 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "newsletter_ip4FFP": {
-      "type": "newsletter",
+    "footer": {
+      "type": "footer",
       "blocks": {
-        "heading_rE9MVF": {
-          "type": "heading",
+        "image_Jh9TQW": {
+          "type": "image",
           "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_XJ3ym3": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new  and exclusive offers.<\/p>"
-          }
-        },
-        "email_form_wMXRta": {
-          "type": "email_form",
-          "settings": {
+            "image": "shopify:\/\/shop_images\/logo.png",
+            "image_width": 65,
+            "alignment": ""
           }
         }
       },
       "block_order": [
-        "heading_rE9MVF",
-        "paragraph_XJ3ym3",
-        "email_form_wMXRta"
+        "image_Jh9TQW"
       ],
-      "settings": {
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "footer": {
-      "type": "footer",
       "settings": {
         "color_scheme": "scheme-2",
         "newsletter_enable": true,
@@ -55,7 +34,6 @@
     }
   },
   "order": [
-    "newsletter_ip4FFP",
     "footer"
   ]
 }
