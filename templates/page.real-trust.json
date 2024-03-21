@@ -7,38 +7,16 @@
         "padding_bottom": 28
       }
     },
-    "introduction": {
-      "type": "introduction",
-      "settings": {
-        "title": "No es tu agente inmobiliario promedio",
-        "description": "Real Trust tiene un ojo para ver el potencial de una propiedad, coordinar el diseño y el marketing efectivo para obtener el máximo beneficio para los propietarios en sus ventas."
-      }
+    "introduction":{
+      "type": "introduction"
+      
     },
-    "services": {
-      "type": "services",
-      "settings": {
-        "title": "¿Por qué elegirnos?",
-        "features": [
-          {
-            "title": "ROI Potencial",
-            "description": "Ya sea que estés buscando comprar una casa para renovarla o renovar tu hogar actual para la venta, te guiaremos a través de los posibles retornos para los proyectos."
-          },
-          {
-            "title": "Diseño",
-            "description": "Nuestra experiencia en diseño de interiores es la guía perfecta para tus opciones de diseño y la coordinación de contratistas para completar la mejora del hogar."
-          },
-          {
-            "title": "Marketing",
-            "description": "La consulta de puesta en escena, fotografías profesionales y un plan de marketing digital sofisticado acompañan cada anuncio para llegar a los compradores de hoy."
-          }
-        ]
-      }
+    "services":{
+    "type": "services"
     }
   },
   "order": [
-    "main",
-    "introduction",
-    "services"
+    "landing", "introduction"
   ]
 }
 
