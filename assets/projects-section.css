@@ -1,0 +1,24 @@
+.project {
+    display: flex;
+      align-items: center; 
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background-color: #f8f8f8;
+  }
+  .project img {
+   max-width: 30%;
+      height: auto;
+      margin-right: 20px; 
+  }
+  .project-description {
+      flex-grow: 1;
+  }
+  h2{
+      text-align: center;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }

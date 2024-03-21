@@ -1,59 +1,64 @@
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<style>
-    .project {
-      display: flex;
-        align-items: center; 
-        margin-bottom: 20px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        background-color: #f8f8f8;
-    }
-    .project img {
-     max-width: 30%;
-        height: auto;
-        margin-right: 20px; 
-    }
-    .project-description {
-        flex-grow: 1;
-    }
-    h2{
-        text-align: center;
-    }
-  
-</style>
+<link rel="stylesheet" href="{{ 'projects-section.css' |  asset_url }}">
+<div class="page-width">
+    <h2>{{ section.settings.title }}</h2>
 
-<h2>Remodeled House Projects</h2>
-<!-- Project 1 -->
-<div class="project"><img alt="Project 1" src="{{ 'casa-de-playa.jpg' | asset_url }} alt="Remodelada moderna casa de playa">
-<div class="project-description">
-        <h2>Modern Beach House</h2>
-        <p>This remodel transformed an old beach house into a modern coastal retreat. Expanding windows and the use of contemporary materials create a bright and inviting atmosphere.</p>
-    </div>
+    {% assign reverse = false %}
+    {% for proyect in section.blocks %}
+    <div class="project  {% if reverse == true %}reverse{% endif %}">
+        <img
+          alt="Project 1"
+          src="{{ proyect.settings.img |  img_url: 'master' }}" alt="img">
+        <div class="project-description">
+          <h2>{{ proyect.settings.title }}</h2>
+          <p>{{ proyect.settings.description }}</p>
+        </div>
+      </div>
+        {% if reverse == false %}
+            {% assign reverse = true %}
+        {% else %}
+            {% assign reverse = false %}
+        {% endif %}
+      
+    {% endfor %}
+        
 </div>
 
-<!-- Project 2 -->
-<div class="project">
-<img alt="Project 2" src="{{ 'casa-historica.jpg' | asset_url }}" alt="Casa Historica Renovada">
-<div class="project-description">
-        <h2>Historic House Renovation</h2>
-        <p>In this project, a historic house was restored to preserve its original charm while updating modern amenities. Original architectural details were respected while functionality was improved.</p>
-    </div>
-</div>
-
-<!-- Project 3 -->
-<div class="project"><img alt="Project 3" src="{{ 'casa-de-campo.jpg' | asset_url }}" alt="Casa Historica Renovada">
-<div class="project-description">
-        <h2>Renovated Countryside Home</h2>
-        <p>This countryside home underwent a complete transformation with a renovation that included a new kitchen, updated bathrooms, and an expansion of living space. The interior design reflects rustic chic style.</p>
-    </div>
-</div>
-
-<!-- Project 4 -->
-<div class="project"><img alt="Project 4" src="{{ 'casa-urbana.jpg' | asset_url }}" alt="Loft Urban">
-<div class="project-description">
-        <h2>Redesigned Urban Loft</h2>
-        <p>In this project, an old warehouse was converted into a modern urban loft. Spaces were opened up, wooden beams were exposed, and industrial touches were added to create a contemporary and unique space.</p>
-    </div>
-</div>
+ 
+{% schema %}
+  {
+    "name": "Projects",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "title",
+        "default": "Remodeled House Projects"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "projects",
+        "name": "projects",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "title",
+            "default": "Modern Beach House"
+          },
+          {
+            "id": "description",
+            "type": "textarea",
+            "label": "description",
+            "default": "This remodel transformed an old beach house into a modern coastal retreat. Expanding windows and the use of contemporary materials create a bright and inviting atmosphere."
+          },
+          {
+            "id": "img",
+            "type": "image_picker",
+            "label": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

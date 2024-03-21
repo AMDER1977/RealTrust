@@ -21,12 +21,32 @@
 </style>
 
 <div class="introduction">
-    <div class="container">
-        <h2>{{ "Real Trust, Not Your Average Real Estate Agent" }}</h2>
-        <h3>Real Trust has a keen eye for spotting a property's potential, coordinating design and marketing to ensure property owners get the maximum benefit from their sales.</h3>
+    <div class="container page-width">
+        <h2>{{ section.settings.title }}</h2>
+        <h3>{{ section.settings.desc }}</h3>
     </div>
 </div>
 
 
 
+
+{% schema %}
+{
+  "name": "introduction",
+  "settings": [
+      {
+        "id": "title",
+        "label": "Title",
+        "type": "text",
+        "default": "Real Trust, Not Your Average Real Estate Agent"
+      },
+      {
+        "id": "desc",
+        "type": "textarea",
+        "label": "Subtitle",
+        "default": "Real Trust has a keen eye for spotting a property's potential, coordinating design and marketing to ensure property owners get the maximum benefit from their sales."
+      }
+    ]
+}
+{% endschema %}
 

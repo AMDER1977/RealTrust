@@ -1,67 +1,73 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8"> <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <style>
-.testimonial {
-      margin-bottom: 20px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #c7e4f1;
-      opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .testimonial img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-right: 10px;
-      float: left;
-    }
-    .testimonial.in-view {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  .testimonial {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #c7e4f1;
+  width: 80%;
+  margin: auto;
+
+
+  }
+  .testimonial img {
+    width: 10%;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+    object-fit: cover;
+  }
+ 
 </style>
-</head>
-<body>
 
-<h2>Testimonials</h2>
-<!-- Testimonio 1 -->
-<div style="text-align: start;" class="testimonial">
-<img style="margin-right: 10px; float: start;" src="{{ 'will.jpg' | asset_url }} alt="Will Armstrong">
-<p><strong>Will Armstrong</strong></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<div class="page-width">
+
+  <h2>{{ section.settings.title }}</h2>
+
+
+  <!-- Slider main container -->
+  <div class="swiper">
+
+    <div class="swiper-wrapper">
+
+
+      {% for block in section.blocks %}
+        <div class="swiper-slide testimonial ">
+
+          <img
+            style="margin-right: 10px; float: start;"
+            src="{{ block.settings.img |  img_url: 'master' }} alt="
+            {{ block.settings.name }}
+            ">
+          <p>
+            <strong>{{ block.settings.name }}</strong>
+          </p>
+          <p>{{ block.settings.description }}</p>
+
+        <!-- <div style="text-align: start;" class="testimonial">
+         </div> -->
+        </div>
+      {% endfor %}
+
+
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div> 
+
 </div>
 
-<!-- Testimonio 2 -->
-<div class="testimonial">
-<img src="{{ 'brenda.jpg' | asset_url }} alt="Brenda Hudson">
-<p><strong>Brenda Hudson</strong></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<!-- Testimonio 3 -->
-<div class="testimonial">
-<img src="{{ 'ronnel.jpg' | asset_url }} alt="Ronnel Mc Dowell">
-<p><strong>Ronnel Mc Dowell</strong></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<!-- Testimonio 4 -->
-<div class="testimonial">
-<img src="{{ 'peter.jpg' | asset_url }} alt="Peter Suarez">
-<p><strong>Peter Suarez</strong></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    /*document.addEventListener('DOMContentLoaded', function () {
         const testimonials = document.querySelectorAll('.testimonial');
         const screenHeight = window.innerHeight;
-
+  
         function fadeInTestimonials() {
             testimonials.forEach(function (testimonial) {
                 const testimonialPosition = testimonial.getBoundingClientRect().top;
@@ -70,13 +76,69 @@
                 }
             });
         }
-
+  
         window.addEventListener('scroll', function () {
             fadeInTestimonials();
         });
-
+  
         fadeInTestimonials(); // Mostrar testimonios que ya están en la vista al cargar la página
-    });
+    }); */
+  
+  
+  
+  const swiper = new Swiper('.swiper', {
+
+    loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    spaceBetween: 30,
+ 
+  });
 </script>
-</body>
-</html>
+
+
+{% schema %}
+  {
+    "name": "Testimonials",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "title",
+        "default": "Testimonials"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "testimonials",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "id": "name",
+            "type": "text",
+            "label": "name",
+            "default": "Will Armstrong"
+          },
+          {
+            "id": "description",
+            "type": "textarea",
+            "label": "description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          },
+          {
+            "id": "img",
+            "type": "image_picker",
+            "label": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
