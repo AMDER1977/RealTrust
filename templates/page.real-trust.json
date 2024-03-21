@@ -1,91 +1,21 @@
 {
   "sections": {
-        "main": {
+    "main": {
       "type": "main-page",
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
     },
-    "introduction": {
-      "type": "introduction",
-      "settings": {
-        "title": "No es tu agente inmobiliario promedio",
-        "description": "Real Trust tiene un ojo para ver el potencial de una propiedad, coordinar el diseño y el marketing efectivo para obtener el máximo beneficio para los propietarios en sus ventas."
-      }
+    "introduction":{
+      "type": "introduction"
+      
     },
-    "services": {
-      "type": "services",
-      "settings": {
-        "title": "¿Por qué elegirnos?",
-        "features": [
-          {
-            "title": "ROI Potencial",
-            "description": "Ya sea que estés buscando comprar una casa para renovarla o renovar tu hogar actual para la venta, te guiaremos a través de los posibles retornos para los proyectos."
-          },
-          {
-            "title": "Diseño",
-            "description": "Nuestra experiencia en diseño de interiores es la guía perfecta para tus opciones de diseño y la coordinación de contratistas para completar la mejora del hogar."
-          },
-          {
-            "title": "Marketing",
-            "description": "La consulta de puesta en escena, fotografías profesionales y un plan de marketing digital sofisticado acompañan cada anuncio para llegar a los compradores de hoy."
-          }
-        ]
-      }
-    },
-    "footer": {
-      "type": "footer",
-      "settings": {
-        "logo": "url_del_logo_de_Real_Trust",
-        "main_links": [
-          {
-            "label": "Inicio",
-            "url": "#"
-          },
-          {
-            "label": "Servicios",
-            "url": "#services"
-          },
-          {
-            "label": "Acerca de",
-            "url": "#about"
-          },
-          {
-            "label": "Proyectos",
-            "url": "#projects"
-          },
-          {
-            "label": "Testimonios",
-            "url": "#testimonials"
-          },
-          {
-            "label": "Contacto",
-            "url": "#contact"
-          }
-        ],
-        "social_links": [
-          {
-            "icon": "url_del_icono_facebook",
-            "url": "enlace_a_la_pagina_de_facebook"
-          },
-          {
-            "icon": "url_del_icono_twitter",
-            "url": "enlace_a_la_cuenta_de_twitter"
-          },
-          {
-            "icon": "url_del_icono_instagram",
-            "url": "enlace_al_perfil_de_instagram"
-          }
-        ]
-      }
+    "services":{
+    "type": "services"
     }
   },
   "order": [
-    "header",
-    "main",
-    "introduction",
-    "services",
-    "footer"
+    "main", "introduction"
   ]
 }
