@@ -1,34 +1,6 @@
 {
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {
-        "logo": "url_del_logo_de_Real_Trust",
-        "nav_links": [
-          {
-            "label": "Servicios",
-            "url": "#services"
-          },
-          {
-            "label": "Acerca de",
-            "url": "#about"
-          },
-          {
-            "label": "Proyectos",
-            "url": "#projects"
-          },
-          {
-            "label": "Testimonios",
-            "url": "#testimonials"
-          },
-          {
-            "label": "Contacto",
-            "url": "#contact"
-          }
-        ]
-      }
-    },
-    "main": {
+        "main": {
       "type": "main-page",
       "settings": {
         "padding_top": 28,
