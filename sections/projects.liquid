@@ -1,16 +1,22 @@
-<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <style><!--
     .project {
-      margin-bottom: 20px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 20px;
+      display: flex;
+        align-items: center; 
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        background-color: #f8f8f8;
     }
     .project img {
-     align-items: center;
-      max-width: 30%;
-      height: auto;
-      margin-bottom: 10px;
+     max-width: 30%;
+        height: auto;
+        margin-right: 20px; 
+    }
+    .project-description {
+        flex-grow: 1;
     }
     h2{
         text-align: center;
@@ -20,21 +26,33 @@
 <h2>Remodeled House Projects</h2>
 <!-- Project 1 -->
 <div class="project"><img alt="Project 1" src="{{ 'casa-de-playa.jpg' | asset_url }} alt="Remodelada moderna casa de playa"">
-<h2>Project 1: Modern Beach House</h2>
-<p>This remodel transformed an old beach house into a modern coastal retreat. Expanding windows and the use of contemporary materials create a bright and inviting atmosphere.</p>
+<div class="project-description">
+        <h2>Modern Beach House</h2>
+        <p>This remodel transformed an old beach house into a modern coastal retreat. Expanding windows and the use of contemporary materials create a bright and inviting atmosphere.</p>
+    </div>
 </div>
+
 <!-- Project 2 -->
-<div class="project"><img alt="Project 2" src="{{ 'casa-historica.jpg' | asset_url }}" alt="Casa Historica Renovada">
-<h2>Project 2: Historic House Renovation</h2>
-<p>In this project, a historic house was restored to preserve its original charm while updating modern amenities. Original architectural details were respected while functionality was improved.</p>
+<div class="project">
+<img alt="Project 2" src="{{ 'casa-historica.jpg' | asset_url }}" alt="Casa Historica Renovada">
+<div class="project-description">
+        <h2>Historic House Renovation</h2>
+        <p>In this project, a historic house was restored to preserve its original charm while updating modern amenities. Original architectural details were respected while functionality was improved.</p>
+    </div>
 </div>
+
 <!-- Project 3 -->
 <div class="project"><img alt="Project 3" src="{{ 'casa-de-campo.jpg' | asset_url }}" alt="Casa Historica Renovada">
-<h2>Project 3: Renovated Countryside Home</h2>
-<p>This countryside home underwent a complete transformation with a renovation that included a new kitchen, updated bathrooms, and an expansion of living space. The interior design reflects rustic chic style.</p>
+<div class="project-description">
+        <h2>Renovated Countryside Home</h2>
+        <p>This countryside home underwent a complete transformation with a renovation that included a new kitchen, updated bathrooms, and an expansion of living space. The interior design reflects rustic chic style.</p>
+    </div>
 </div>
+
 <!-- Project 4 -->
 <div class="project"><img alt="Project 4" src="{{ 'casa-urbana.jpg' | asset_url }}" alt="Loft Urban">
-<h2>Project 4: Redesigned Urban Loft</h2>
-<p>In this project, an old warehouse was converted into a modern urban loft. Spaces were opened up, wooden beams were exposed, and industrial touches were added to create a contemporary and unique space.</p>
+<div class="project-description">
+        <h2>Redesigned Urban Loft</h2>
+        <p>In this project, an old warehouse was converted into a modern urban loft. Spaces were opened up, wooden beams were exposed, and industrial touches were added to create a contemporary and unique space.</p>
+    </div>
 </div>
