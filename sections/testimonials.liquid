@@ -1,23 +1,21 @@
 <style>
   .testimonial {
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #c7e4f1;
-    width: 30%;
-    margin-left: 10px;
-    margin-right: 10px;
+    background: linear-gradient(to bottom, #b4d4e4, #4898c4); 
+    width: 90%;
     overflow-x: hidden;
   
   }
   .testimonial p{
-    max-width: calc(100% - 60px);
-    font-size: 20px;
-    font-height: 1.3;
+    max-width: calc(100% - 80px);
+    font-size: 18px;
+    font-height: 1.5;
  
   }
   .testimonial img {
-    max-width: 60%;
+    max-width: 100%;
     height: 60px;
     border-radius: 50%;
     margin-right: 10px;
@@ -26,7 +24,7 @@
   }
   
   .swiper {
-  overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+  overflow-x: hidden; 
 }
 
 </style>
@@ -45,12 +43,14 @@
     <div class="swiper-wrapper">
 
     {% for block in section.blocks %}
-      <div class="swiper-slide testimonial">
+      <div class="swiper-slide ">
+      <div class=" testimonial">
         <img src="{{ block.settings.img | img_url: 'master' }}" alt="{{ block.settings.name }}">
         <div>
           <strong>{{ block.settings.name }}</strong>
           <p>{{ block.settings.description }}</p>
         </div>
+      </div>
       </div>
     {% endfor %}
     
@@ -78,7 +78,7 @@
       delay: 2500,
       disableOnInteraction: false,
     },
-    spaceBetween: 30,
+    spaceBetween: 40,
     
  
   });
