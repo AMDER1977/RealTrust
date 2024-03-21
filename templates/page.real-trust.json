@@ -10,9 +10,12 @@
     "introduction":{
       "type": "introduction"
       
+    },
+    "services":{
+    "type": "services"
     }
   },
   "order": [
-    "main", "introduction"
+    "main", "introduction", "services"
   ]
 }
