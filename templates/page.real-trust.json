@@ -16,7 +16,6 @@
     }
   },
   "order": [
-    "landing", "introduction"
+    "main", "introduction", "services"
   ]
 }
-
