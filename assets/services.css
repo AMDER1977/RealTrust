@@ -1,21 +1,7 @@
 
-body{
-  box-sizing: border-box;
-}
 
 .services {
-  background-color: blue;
-  display: flex;
-  text-align: center;
+    text-align: center;
   }
   
-  .services .container h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-    
-  }
   
