@@ -21,6 +21,11 @@
       "type": "projects",
       "settings": {
       }
+    },
+    "testimomnials": {
+      "type": "testimonials",
+      "settings": {
+      }
     }
     
       
@@ -29,6 +34,7 @@
     "main",
     "introduction",
     "services",
-    "projects"
+    "projects",
+    "testimonials"
   ]
 }
